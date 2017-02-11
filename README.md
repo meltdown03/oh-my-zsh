@@ -4,7 +4,7 @@ To install, see below the .zshrc file for the original README and just replace m
 "rkj-repos-hist" theme adds history number to the already awesome prompt.
 "notify-send" plugin made by me. Based loosly off the bgnotify plugin.
 Here is my .zshrc file:
-
+```shell
 # If you come from bash you might have to change your $PATH.
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 
@@ -154,7 +154,7 @@ zstyle ':completion:*:*:kill:*:processes' list-colors '=(#b) #([0-9]#)*=0=01;31'
 zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,tty,cputime,cmd'
 
 [[ -f /usr/bin/screenfetch ]] && screenfetch -t
-
+```
 ORIGINAL README.md:
 
 <p align="center">
