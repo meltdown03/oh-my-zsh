@@ -1,6 +1,7 @@
 #notify-send.plugin.zsh
 
 #REQUIRES: xorg-xprop, awk/gawk, AND libnotify-bin
+
 #IF THIS OUTPUT CHANGES BEFORE COMMAND FINISHES, NOTIFICATION WILL APPEAR
 CurrentWindow() {
     xprop -root 2> /dev/null | awk '/NET_ACTIVE_WINDOW/{print $5;exit} END{exit !$5}' || echo "0"
