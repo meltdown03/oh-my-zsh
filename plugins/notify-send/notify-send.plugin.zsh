@@ -8,8 +8,8 @@ CurrentWindow() {
 typeset -g _LASTALERT=$HISTCMD
 preexec() {
     SECONDS=0
-    _COMMAND=$(echo "$1")
-    isOpen=$(CurrentWindow)
+    _COMMAND="$(echo "$1")"
+    isOpen="$(CurrentWindow)"
 }
 precmd() {
     local ret_code="$?"
@@ -20,7 +20,7 @@ precmd() {
     [[ $ret_code = 148 ]] && local result="Command Suspended" && local icon="terminal"
     [[ $ret_code = 127 ]] && local result="Command Not Found"
     #ONLY NOTIFY IF WINDOW IS NOT ACTIVE
-    [[ $(CurrentWindow) != "$isOpen" ]] &&
+    [[ "$(CurrentWindow)" != "$isOpen" ]] &&
     #DON'T NOTIFY IF FROM SSH
     [[ -z "$SSH_CONNECTION" ]] &&
     #CHANGE SECONDS TO WHATEVER YOU WANT
