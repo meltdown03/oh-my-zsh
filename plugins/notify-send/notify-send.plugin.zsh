@@ -25,7 +25,7 @@ precmd() {
     #DON'T NOTIFY IF FROM SSH
     [[ -z "$SSH_CONNECTION" ]] &&
     #CHANGE SECONDS TO WHATEVER YOU WANT
-    (( _LASTALERT < HISTCMD && SECONDS > 1 )) &&
+    (( _LASTALERT < HISTCMD && SECONDS > 10 )) &&
     #6000ms (6 SECOND) TIMEOUT
     notify-send -t 6000 -u low -i \
          $icon "Terminal - Exit code {$ret_code}: $result" \"$_COMMAND\" &&
