@@ -59,11 +59,7 @@ main() {
       exit 1
     fi
   fi
-<<<<<<< HEAD
-  env git clone --depth=1 https://github.com/meltdown03/oh-my-zsh.git $ZSH || {
-=======
   env git clone --depth=1 https://github.com/meltdown03/oh-my-zsh.git "$ZSH" || {
->>>>>>> upstream/master
     printf "Error: git clone of oh-my-zsh repo failed\n"
     exit 1
   }
