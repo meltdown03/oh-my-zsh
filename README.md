@@ -62,7 +62,7 @@ ZSH_THEME="rkj-repos-hist"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git colorize mosh rvm zsh-autosuggestions zsh-syntax-highlighting notify-send)
+plugins=(git notify-send)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -92,14 +92,6 @@ export LESS="--RAW-CONTROL-CHARS"
 # ssh
 # export SSH_KEY_PATH="~/.ssh/rsa_id"
 
-# Set personal aliases, overriding those provided by oh-my-zsh libs,
-# plugins, and themes. Aliases can be placed here, though oh-my-zsh
-# users are encouraged to define aliases within the ZSH_CUSTOM folder.
-# For a full list of active aliases, run `alias`.
-#
-# Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
 # Set up the prompt
 
 #autoload -Uz promptinit
@@ -113,8 +105,6 @@ export LESS="--RAW-CONTROL-CHARS"
 HISTSIZE=50000
 SAVEHIST=100000
 HISTFILE=~/.zsh_history
-setopt no_hist_verify
-#setopt histappend
 
 # Use modern completion system
 autoload -Uz compinit
@@ -123,18 +113,6 @@ compinit
 
 bindkey '^i' expand-or-complete-prefix
 
-alias ls='ls --color=auto'
-alias dir='dir --color=auto'
-alias vdir='vdir --color=auto'
-alias grep='grep --color=auto'
-alias fgrep='fgrep --color=auto'
-alias egrep='egrep --color=auto'
-alias ll='ls -alF'
-alias la='ls -ACF'
-alias l='ls -CF'
-alias ip='ip -c'
-alias atom="atom-beta"
-alias canto="canto-curses"
 eval "$(dircolors -b)"
 
 ```
